@@ -15,13 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle's falabella theme, an example of how to make a Bootstrap theme
- *
- * DO NOT MODIFY THIS THEME!
- * COPY IT FIRST, THEN RENAME THE COPY AND MODIFY IT INSTEAD.
- *
- * For full information about creating Moodle themes, see:
- * http://docs.moodle.org/dev/Themes_2.0
+ * The two column layout.
  *
  * @package   theme_falabella
  * @copyright 2013 Moodle, moodle.org
@@ -31,17 +25,13 @@
 // Get the HTML for the settings bits.
 $html = theme_falabella_get_html_for_settings($OUTPUT, $PAGE);
 
-// Set default (LTR) layout mark-up for a three column page.
-$regionmainbox = 'span9';
-$regionmain = 'span8 pull-right';
-$sidepre = 'span4 desktop-first-column';
-$sidepost = 'span3 pull-right';
+// Set default (LTR) layout mark-up for a two column page (side-pre-only).
+$regionmain = 'span9 pull-right';
+$sidepre = 'span3 desktop-first-column';
 // Reset layout mark-up for RTL languages.
 if (right_to_left()) {
-    $regionmainbox = 'span9 pull-right';
-    $regionmain = 'span8';
-    $sidepre = 'span4 pull-right';
-    $sidepost = 'span3 desktop-first-column';
+    $regionmain = 'span9';
+    $sidepre = 'span3 pull-right';
 }
 
 echo $OUTPUT->doctype() ?>
@@ -53,7 +43,8 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body <?php echo $OUTPUT->body_attributes(); ?>>
+<body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
+<h1>frontpage</h1>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
@@ -82,19 +73,15 @@ echo $OUTPUT->doctype() ?>
 <div id="page" class="container-fluid">
     <?php echo $OUTPUT->full_header(); ?>
     <div id="page-content" class="row-fluid">
-        <div id="region-main-box" class="<?php echo $regionmainbox; ?>">
-            <div class="row-fluid">
-                <section id="region-main" class="<?php echo $regionmain; ?>">
-                    <?php
-                    echo $OUTPUT->course_content_header();
-                    echo $OUTPUT->main_content();
-                    echo $OUTPUT->course_content_footer();
-                    ?>
-                </section>
-                <?php echo $OUTPUT->blocks('side-pre', $sidepre); ?>
-            </div>
-        </div>
-        <?php echo $OUTPUT->blocks('side-post', $sidepost); ?>
+        <section id="region-main" class="<?php echo $regionmain; ?>">
+            <?php
+            echo $OUTPUT->course_content_header();
+            echo $OUTPUT->main_content();
+            echo $OUTPUT->course_content_footer();
+            ?>
+        </section>
+        <?php echo $OUTPUT->blocks('side-pre', $sidepre);
+        ?>
     </div>
 
     <footer id="page-footer">

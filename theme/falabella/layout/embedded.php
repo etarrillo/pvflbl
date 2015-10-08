@@ -17,7 +17,7 @@
 /**
  * The embedded layout.
  *
- * @package   theme_clean
+ * @package   theme_falabella
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

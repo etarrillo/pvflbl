@@ -1,0 +1,26 @@
+/*Clases generales de los iconos*/
+.fb-icon{
+	width: 14px;
+	height: 14px;
+	margin-right: 5px;
+	display: inline-block;
+	background-image: url([[pix:theme|sprite-iconos-fb]]);
+	background-repeat: no-repeat;
+}
+.fb-mail{
+	background-position: -70px -245px;
+}
+.fb-phone{
+	background-position: -70px -206px;
+}
+
+/*Estilos fonts*/
+.fb-txt-green{
+	color: #144633;
+}
+.fb-txt-gray{
+	color: #555759;
+}
+.fb-txt-bold{
+	font-weight: bold;
+}

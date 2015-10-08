@@ -17,13 +17,13 @@
 /**
  * The secure layout.
  *
- * @package   theme_clean
+ * @package   theme_falabella
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // Get the HTML for the settings bits.
-$html = theme_clean_get_html_for_settings($OUTPUT, $PAGE);
+$html = theme_falabella_get_html_for_settings($OUTPUT, $PAGE);
 
 // Set default (LTR) layout mark-up for a three column page.
 $regionmainbox = 'span9';

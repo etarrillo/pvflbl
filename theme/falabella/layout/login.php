@@ -38,51 +38,26 @@ echo $OUTPUT->doctype() ?>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?> moodle-has-zindex">
-    <nav role="navigation" class="navbar-inner">
-        <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
-                format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
-                ?></a>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <?php echo $OUTPUT->user_menu(); ?>
-            <div class="nav-collapse collapse">
-                <?php echo $OUTPUT->custom_menu(); ?>
-                <ul class="nav pull-right">
-                    <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<div id="page" class="container-fluid">
-
-    <?php echo $OUTPUT->full_header(); ?>
-
+<div id="page-login" class="container-fluid">
     <div id="page-content" class="row-fluid">
-        <section id="region-main" class="span12">
+        <section id="fb-logo" class="span4">
+            <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-en-falabella.png" alt="">
+        </section>
+        <section id="fb-form" class="span8">
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
             echo $OUTPUT->course_content_footer();
             ?>
         </section>
+        <section class="img-logo" class="span11">
+            <img class="pull-right" src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-banco-falabella.png" alt="">
+        </section>
     </div>
 
     <footer id="page-footer">
-        <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
-        <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
-        <?php
-        echo $html->footnote;
-        echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
-        ?>
+        <p class="fb-txt-green fb-txt-bold">Soporte virtual</p>
+        <p><span class="fb-icon fb-mail"></span>soporte.escuela@bancofalabella.com | <span class="fb-icon fb-phone"></span>021 529 3000</p>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>

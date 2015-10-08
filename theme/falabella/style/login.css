@@ -1,0 +1,111 @@
+#page-login-index{
+	padding-top: 0px!important;
+}
+#page-login{
+	background-image: url([[pix:theme|bg-login]]);
+	background-position: center center;
+	width: 984px;
+	padding: 15px 15px 0 15px;
+	background-color: gray;
+}
+#page-login{
+	background-color: #ededed;
+}
+#page-login #fb-logo{
+	margin-top: 40px;
+}
+#page-login #fb-logo img{
+	width: 100%;
+	height: auto;
+}
+#page-login #fb-form{
+	margin-top: 200px;
+}
+#page-footer{
+	text-align: right;
+	border-top: 1px solid #555759;
+	border-bottom: 1px solid #555759;
+}
+/*Formulario*/
+.loginbox{}
+.loginbox .loginpanel{
+	width: 60%;
+}
+.loginbox .loginpanel h2{}
+.loginbox .loginpanel .loginsub{}
+.loginbox .loginpanel .loginsub form{
+
+}
+
+.loginbox .loginpanel .loginsub form .loginform{}
+.loginbox .loginpanel .loginsub form .loginform .form-label{
+	display: none;
+}
+.loginbox .loginpanel .loginsub form .loginform .form-label label{}
+.loginbox .loginpanel .loginsub form .loginform .form-input{
+	float: none;
+	width: 80%;
+}
+.loginbox .loginpanel .loginsub form .loginform .form-input input[type="text"],
+.loginbox .loginpanel .loginsub form .loginform .form-input input[type="password"]{
+	border: 1px solid #a0a1a2;
+	width: 70%;
+}
+.loginbox .loginpanel .loginsub form .form-input>input[type="submit"]{
+	color: #ffffff;
+	border:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	text-shadow:none;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#007833+0,007833+100 */
+	background: #007833; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNzgzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDc4MzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #007833 0%, #007833 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007833), color-stop(100%,#007833)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #007833 0%,#007833 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #007833 0%,#007833 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #007833 0%,#007833 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #007833 0%,#007833 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007833', endColorstr='#007833',GradientType=0 ); /* IE6-8 */
+}
+.loginbox .loginpanel .loginsub form>input[type="submit"]:hover{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#068700+0,068700+100 */
+background: #068700; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA2ODcwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNjg3MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #068700 0%, #068700 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#068700), color-stop(100%,#068700)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #068700 0%,#068700 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #068700 0%,#068700 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #068700 0%,#068700 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #068700 0%,#068700 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#068700', endColorstr='#068700',GradientType=0 ); /* IE6-8 */
+}
+section#img-logo{}
+section#img-logo img{
+	margin-right: 5%;
+}
+span.forgetpass a{
+	color:#555759!important;
+	font-weight:200;
+}
+span.forgetpass a:hover{
+	text-decoration: underline;
+}
+.loginbox .loginpanel .loginsub .desc{
+	display: none;
+}
+#title-login{
+	text-align: left;
+}
+#title-login h3{
+	font-size: 32px;
+	color: #555759;
+}
+#title-login h4{
+	font-size: 20px;
+	color: #007833;
+}
+

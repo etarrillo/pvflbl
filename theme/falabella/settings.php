@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle's Clean theme, an example of how to make a Bootstrap theme
+ * Moodle's falabella theme, an example of how to make a Bootstrap theme
  *
  * DO NOT MODIFY THIS THEME!
  * COPY IT FIRST, THEN RENAME THE COPY AND MODIFY IT INSTEAD.
@@ -23,7 +23,7 @@
  * For full information about creating Moodle themes, see:
  * http://docs.moodle.org/dev/Themes_2.0
  *
- * @package   theme_clean
+ * @package   theme_falabella
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -33,34 +33,34 @@ defined('MOODLE_INTERNAL') || die;
 if ($ADMIN->fulltree) {
 
     // Invert Navbar to dark background.
-    $name = 'theme_clean/invert';
-    $title = get_string('invert', 'theme_clean');
-    $description = get_string('invertdesc', 'theme_clean');
+    $name = 'theme_falabella/invert';
+    $title = get_string('invert', 'theme_falabella');
+    $description = get_string('invertdesc', 'theme_falabella');
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Logo file setting.
-    $name = 'theme_clean/logo';
-    $title = get_string('logo','theme_clean');
-    $description = get_string('logodesc', 'theme_clean');
+    $name = 'theme_falabella/logo';
+    $title = get_string('logo','theme_falabella');
+    $description = get_string('logodesc', 'theme_falabella');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Custom CSS file.
-    $name = 'theme_clean/customcss';
-    $title = get_string('customcss', 'theme_clean');
-    $description = get_string('customcssdesc', 'theme_clean');
+    $name = 'theme_falabella/customcss';
+    $title = get_string('customcss', 'theme_falabella');
+    $description = get_string('customcssdesc', 'theme_falabella');
     $default = '';
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Footnote setting.
-    $name = 'theme_clean/footnote';
-    $title = get_string('footnote', 'theme_clean');
-    $description = get_string('footnotedesc', 'theme_clean');
+    $name = 'theme_falabella/footnote';
+    $title = get_string('footnote', 'theme_falabella');
+    $description = get_string('footnotedesc', 'theme_falabella');
     $default = '';
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
