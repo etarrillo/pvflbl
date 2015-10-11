@@ -38,7 +38,7 @@ $THEME->name = 'falabella';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom','falabella','login');
+$THEME->sheets = array('fonts','custom','falabella','login');
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 $THEME->layouts = array(

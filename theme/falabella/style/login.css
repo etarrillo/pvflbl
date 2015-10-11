@@ -21,10 +21,21 @@
 #page-login #fb-form{
 	margin-top: 200px;
 }
-#page-footer{
+#page-login-index #page-footer{
 	text-align: right;
 	border-top: 1px solid #555759;
 	border-bottom: 1px solid #555759;
+	background-image: none;
+}
+#page-footer p.fb-txt-green.fb-txt-bold{
+	font-size: 14px;
+}
+#page-footer{
+	padding: 0px!important;
+}
+#page-footer p{
+	font-size: 12px;
+	line-height: 24px;
 }
 /*Formulario*/
 .loginbox{}

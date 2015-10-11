@@ -38,6 +38,8 @@ echo $OUTPUT->doctype() ?>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
+<p class="esconder-txt">maintenance</p>
+
 <div id="page" class="container-fluid">
 
     <header id="page-header" class="clearfix">

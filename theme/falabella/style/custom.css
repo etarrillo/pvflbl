@@ -19,3 +19,7 @@ div.logo {
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
+body{
+    padding-top: 0px;
+    font-family: 'pf_beausans_proregular';
+}

@@ -47,26 +47,48 @@ echo $OUTPUT->doctype() ?>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?> moodle-has-zindex">
-    <nav role="navigation" class="navbar-inner">
-        <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo
-                format_string($SITE->shortname, true, array('context' => context_course::instance(SITEID)));
-                ?></a>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <?php echo $OUTPUT->user_menu(); ?>
-            <div class="nav-collapse collapse">
-                <?php echo $OUTPUT->custom_menu(); ?>
-                <ul class="nav pull-right">
-                    <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
-                </ul>
+<p class="esconder-txt">columns2</p>
+
+<header>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div id="fb-breadcrumb">
+                <?php echo $OUTPUT->navbar(); ?>
+            </div>
+            <div id="fb-user-menu">
+                <?php echo $OUTPUT->user_menu(); ?>
             </div>
         </div>
-    </nav>
+        <div class="row-fluid">
+            <div class="span12" id="fb-space-logo">
+                <a class="brand" href="<?php echo $CFG->wwwroot;?>">
+                    <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-banco-falabella.png" alt="">
+                </a>
+            </div>
+        </div>
+        
+        <div class="row-fluid">
+            <div class="span12" id="fb-menu">
+                <div class="navbar">
+                    <nav role="navigation" id="fb-main-menu">
+                        <div class="container-fluid">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <div class="nav-collapse collapse">
+                                <?php echo $OUTPUT->custom_menu(); ?>
+                                <!-- <ul class="nav pull-right">
+                                    <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>        
+    </div>
 </header>
 
 <div id="page" class="container-fluid">
@@ -84,14 +106,8 @@ echo $OUTPUT->doctype() ?>
     </div>
 
     <footer id="page-footer">
-        <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
-        <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
-        <?php
-        echo $html->footnote;
-        echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
-        ?>
+        <p class="fb-txt-green fb-txt-bold">Soporte virtual</p>
+        <p><span class="fb-icon fb-mail"></span>soporte.escuela@bancofalabella.com | <span class="fb-icon fb-phone"></span>021 529 3000</p>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>

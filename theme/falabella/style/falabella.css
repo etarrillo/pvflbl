@@ -1,3 +1,6 @@
+.esconder-txt{
+	/*display: none;*/
+}
 /*Clases generales de los iconos*/
 .fb-icon{
 	width: 14px;
@@ -8,10 +11,10 @@
 	background-repeat: no-repeat;
 }
 .fb-mail{
-	background-position: -70px -245px;
+	background-position: -70px -249px;
 }
 .fb-phone{
-	background-position: -70px -206px;
+	background-position: -70px -216px;
 }
 
 /*Estilos fonts*/
@@ -24,3 +27,243 @@
 .fb-txt-bold{
 	font-weight: bold;
 }
+.fb-responsive{
+	width: 80%;
+	height: auto;
+}
+
+#fb-breadcrumb{
+	width: 77%;
+}
+#fb-user-menu{
+	width: 22%;
+}
+#fb-breadcrumb,
+#fb-user-menu{
+	display: inline-block;
+	vertical-align: top;
+}
+/*Breadcrumb*/
+#fb-breadcrumb ul.breadcrumb{
+	background-color: #047832;
+	border-radius: 5px 0px 0px 5px;
+}
+#fb-breadcrumb ul.breadcrumb li{}
+#fb-breadcrumb ul.breadcrumb li a{
+	color: #ffffff;
+	text-shadow:none;
+}
+#fb-breadcrumb ul.breadcrumb li span{
+	color: #ffffff;
+	text-shadow:none;
+}
+#fb-breadcrumb ul.breadcrumb li span.divider{
+	background-image: url([[pix:theme|sprite-iconos-fb]]);
+	background-repeat: no-repeat;
+	background-position: -66px -47px;
+}
+.arrow.sep{
+	visibility: hidden;
+}
+
+/*user-menu*/
+#fb-user-menu{
+	margin-left: -4px;
+	background-color: #555759;
+	border-radius: 0px 0px 10px 10px;
+	padding: 20px 0px 0px 0px;
+}
+.dir-ltr .usermenu{
+	float: none;
+}
+a.toggle-display{
+	color: #ffffff!important;
+	font-size: 16px!important;
+}
+.userbutton{}
+.userbutton .usertext{
+	float: right;
+}
+.userbutton .avatars{
+	float: left;
+}
+.userbutton .avatars .avatar{}
+.userbutton .avatars .avatar img{}
+.jsenabled .usermenu .moodle-actionmenu .toggle-display .caret {
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    left: 180px;
+}
+.jsenabled .usermenu .moodle-actionmenu.show {
+    background-color: #4b4c4e;
+    border-radius: 0 0 10px 10px;
+}
+.moodle-actionmenu[data-enhanced].show .menu{
+	background-color: #047832;
+}
+.moodle-actionmenu[data-enhanced].show .menu a{
+	color: #ffffff;
+}
+.jsenabled .usermenu .moodle-actionmenu>.menu .filler{
+	display: none;
+}
+.jsenabled .usermenu .moodle-actionmenu.show .menu a:hover{
+	background: rgb(20,70,51); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0NDYzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNDQ2MzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(20,70,51,1) 0%, rgba(20,70,51,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(20,70,51,1)), color-stop(100%,rgba(20,70,51,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#144633', endColorstr='#144633',GradientType=0 ); /* IE6-8 */
+}
+/*Logos del header*/
+#fb-space-logo{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+/*Menu principal*/
+nav#fb-main-menu{
+	border-radius: 10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6f7072+0,6f7072+50,5f6062+51,5f6062+100 */
+	background: rgb(111,112,114); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZmNzA3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzZmNzA3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzVmNjA2MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1ZjYwNjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(111,112,114,1) 0%, rgba(111,112,114,1) 50%, rgba(95,96,98,1) 51%, rgba(95,96,98,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(111,112,114,1)), color-stop(50%,rgba(111,112,114,1)), color-stop(51%,rgba(95,96,98,1)), color-stop(100%,rgba(95,96,98,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(111,112,114,1) 0%,rgba(111,112,114,1) 50%,rgba(95,96,98,1) 51%,rgba(95,96,98,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(111,112,114,1) 0%,rgba(111,112,114,1) 50%,rgba(95,96,98,1) 51%,rgba(95,96,98,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(111,112,114,1) 0%,rgba(111,112,114,1) 50%,rgba(95,96,98,1) 51%,rgba(95,96,98,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(111,112,114,1) 0%,rgba(111,112,114,1) 50%,rgba(95,96,98,1) 51%,rgba(95,96,98,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f7072', endColorstr='#5f6062',GradientType=0 ); /* IE6-8 */
+}
+nav#fb-main-menu ul{}
+nav#fb-main-menu ul li{
+	display: inline-block;
+}
+nav#fb-main-menu ul li a{
+	color: #ffffff;
+	font-size: 17px;
+	display: inline-block;
+}
+ul.dropdown-menu{
+	background-color: #047832!important;
+}
+ul.dropdown-menu li{
+	width: 100%;
+}
+
+ul.dropdown-menu li:hover{}
+ul.dropdown-menu li a{
+	width: 90%;
+	padding: 10px!important;
+	color: #ffffff!important;
+}
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus,
+.dropdown-submenu:hover>a,
+.dropdown-submenu:focus>a{
+	width: 90%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#144633+0,144633+100 */
+	background: rgb(20,70,51); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE0NDYzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNDQ2MzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(20,70,51,1) 0%, rgba(20,70,51,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(20,70,51,1)), color-stop(100%,rgba(20,70,51,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(20,70,51,1) 0%,rgba(20,70,51,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#144633', endColorstr='#144633',GradientType=0 ); /* IE6-8 */
+}
+/*Agregar el background a las páginas de los cursos*/
+.path-course .navbar{
+	margin-bottom: 0px;
+}
+.path-course #page{
+	background-image: url([[pix:theme|bg-frontpage1]]);
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+.navbar .nav>li>a,
+.navbar .nav>li>a{
+	text-shadow:none!important;
+	color: #ffffff!important;
+	font-size: 17px!important;
+}
+
+.navbar .nav>li>a:focus,
+.navbar .nav>li>a:hover{
+	background-color: #144633!important;
+}
+
+/*CURSOS*/
+ul.topics{}
+ul.topics li#section-0{}
+li#section-0 .content .summary h3{
+	font-size: 32px;
+	color: #047832;
+}
+li#section-0 .content .summary h4{
+	font-size: 28px;
+	color: #555759;
+}
+ul.topics li.section{}
+ul.topics li.section .content{}
+ul.topics li.section .content h3.sectionname{
+	font-size: 18px;
+	color: #047832;
+	text-transform: uppercase;
+}
+ul.topics li.section .content ul.section{
+	width: 60%;
+}
+ul.topics li.section .content ul.section li.activity{
+	border: 1px solid #b1b1b1;
+	border-radius: 10px;
+	padding: 15px 0px;
+	box-shadow: 0px 5px 0px #eaeaea;
+	margin-bottom: 15px;
+}
+ul.topics li.section .content ul.section li.activity .activityinstance{}
+ul.topics li.section .content ul.section li.activity .activityinstance a{
+	font-size: 18px;
+	color: #a0a1a2;
+}
+
+.course-content ul li.section.main{
+	border-bottom: none;
+}
+
+/*Esconder los breadcrumbs de la parte inferior*/
+#page-header nav.breadcrumb-nav{
+	display: none;
+}
+
+
+/*footer*/
+#page-footer{
+	background-image: url([[pix:theme|bg-footer]]);
+	background-repeat: no-repeat;
+	background-position: center right;
+	text-align: right;
+	border-top: 1px solid #555759;
+	border-bottom: 1px solid #555759;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

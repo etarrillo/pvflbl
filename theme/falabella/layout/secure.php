@@ -74,6 +74,8 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page" class="container-fluid">
 
+<p class="esconder-txt">secure</p>
+
     <header id="page-header" class="clearfix">
         <?php echo $html->heading; ?>
     </header>
