@@ -1,0 +1,260 @@
+#region-main{
+	width: 980px;
+	padding: 20px;
+	outline: 1px solid black;
+}
+
+/*Iconos*/
+.fb-icon{
+	margin-right: 10px;
+	background-image: url(../img/sprite-iconos-fb.png);
+	background-repeat: no-repeat;
+}
+.fb-icon-parrafo{
+	width: 11px;
+	height: 22px;
+	display: inline-block;
+	background-position: -72px -111px;
+}
+	/*Va en biblioteca y notas*/
+.fb-icon-course{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-position: -67px -12px;
+}
+/*Va en el bloque del frontpage*/
+.fb-icon-bloque-1{
+	width: 25px;
+	height: 26px;
+	display: inline-block;
+	background-position: -14px -11px;
+}
+.fb-icon-bloque-2{
+	width: 30px;
+	height: 32px;
+	display: inline-block;
+	background-position: -14px -180px;
+}
+.fb-icon-item-curso{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background-position: -72px -151px;
+}
+.fb-link-category{
+	width: 8px;
+	height: 13px;
+	display: inline-block;
+	background-position: -73px -82px;
+}
+.fb-link-curso{
+	width: 8px;
+	height: 13px;
+	display: inline-block;
+	background-position: -73px -49px;
+}
+.fb-btn{
+	background-color: #007833;
+	color: #ffffff;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 14px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.fb-btn:hover{
+	text-decoration: none;
+	background-color: #c3d500;
+	color: #007833;
+	padding: 10px;
+	border-radius: 10px;
+}
+.fb-icon-title-category{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-position: -67px -12px;	
+}
+.fb-icon-title-modules-calificaciones,
+.fb-icon-title-modules-biblioteca{
+	width: 32px;
+	height: 34px;
+	display: inline-block;
+}
+.fb-icon-title-modules-calificaciones{
+	background-position: -13px -178px;
+}
+.fb-icon-title-modules-biblioteca{
+	background-position: -13px -92px;
+}
+/*Textos*/
+.fb-txt-green,
+.fb-nota-aprobada{
+	color: #007833;
+}
+.fb-txt-green-dark{
+	color:#144633;
+}
+.fb-txt-gray{
+	color: #555759;
+}
+.fb-txt-bold{
+	font-weight: bold;
+}
+.fb-title{
+	font-size: 32px;
+}
+.fb-title-modules-cal{
+	font-size: 24px;
+	background-color: white;
+	padding: 10px;
+	width: 60%;
+	border-radius: 0 10px 10px 0;
+}
+.fb-title-modules-biblioteca{
+	font-size: 24px;
+	background-color: white;
+	padding: 10px;
+	width: 60%;
+	border-radius: 0 10px 10px 0;
+}
+.fb-subtitle{
+	width: 40%;
+	padding:0px 0px 0px 15px;
+	background-color: #144633;
+	border-radius:  0 10px 10px 0;
+	color: #ffffff;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.fb-parrafo{
+	font-size: 14px;
+	color: #555759;
+}
+.fb-nota-desaprobada{
+	color:red;
+}
+/*Categorias*/
+.fb-list-main-category{}
+.fb-list-main-category .fb-category{
+	border: 1px solid #a0a1a2;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+}
+.fb-list-main-category .fb-category h4{
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #007833;
+}
+.fb-list-main-category .fb-category p{}
+.fb-list-main-category .fb-category a{
+	color: #007833;
+	font-size: 15px;
+	text-align: right;
+	display: block;
+}
+/*Distribuir anchos*/
+.fb-ancho10{width: 10%;}.fb-ancho20{width: 20%;}.fb-ancho30{width: 30%;}.fb-ancho40{width: 40%;}.fb-ancho50{width: 50%;}.fb-ancho60{width: 60%;}.fb-ancho70{width: 70%;}.fb-ancho80{width: 80%;}.fb-ancho90{width: 90%;}.fb-ancho100{width: 100%;}/*tablas*/
+
+/*Tablas de cursos y calificaciones*/
+.fb-table{}
+.fb-table .fb-table-header,
+.fb-table .fb-table-body{
+	border-radius: 10px;
+	border: 1px solid #c8c8c8;
+	padding: 10px;
+	margin: 10px 0 10px 0;
+}
+.fb-table .fb-table-header>span,
+.fb-table .fb-table-body>span{
+	display: inline-block;
+	padding: 5px;
+	text-transform: uppercase;
+}
+.fb-table .fb-table-body>span a{
+	text-transform: initial;
+}
+.fb-table .fb-table-body{}
+.fb-table .fb-table-body span{}
+
+/*Calificaciones*/
+.body-calificaciones,
+.body-biblioteca{
+	background-image: url(../img/bg-calificaciones.png);
+	background-repeat: no-repeat;
+	background-position: right 11px;
+}
+/*Frontpage*/
+.fb-block{}
+.fb-block .fb-block-header{}
+.fb-block .fb-block-header h3{
+	line-height: 30px;
+	border: 1px solid #555759;
+	padding: 5px;
+	font-size: 21px;
+	border-radius: 10px;
+}
+.fb-block .fb-block-header p{
+	padding: 10px;
+}
+.fb-block .fb-block-header>a{
+	text-align: right;
+}
+.fb-block .fb-block-header ul.fb-cursos{}
+.fb-block .fb-block-header ul.fb-cursos li{
+	list-style: none;
+}
+.fb-block .fb-block-header ul.fb-cursos li a{
+	font-size: 17px;
+	border-bottom:1px solid #c3d500;
+	display: block;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+.fb-block .fb-block-header ul.fb-cursos li a:hover{
+	text-decoration: none;
+	color: #43773b;
+}
+.fb-block .fb-block-header ul.fb-cursos li ul.fb-fechas{
+	padding-left: 35px;
+	margin-bottom: 30px;
+	margin-bottom: 15px;
+}
+.fb-block .fb-block-header ul.fb-cursos li ul.fb-fechas li{
+	list-style: none;
+}
+
+/*Perfil*/
+.fb-block-perfil{}
+.fb-block-perfil h4{
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #afafaf;
+}
+.fb-block-perfil form{}
+.fb-block-perfil form label{
+	font-size: 15px;
+	padding-left: 10px;
+	text-align: left!important;
+}
+.fb-block-perfil form input{
+	color: #047832;
+}
+.fb-block-perfil form input[type="submit"]{
+	border: none;
+	font-size: 14px;
+	width: 40%;
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+

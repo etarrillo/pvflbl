@@ -1,11 +1,9 @@
 .esconder-txt{
-	/*display: none;*/
+	display: none;
 }
 /*Clases generales de los iconos*/
 .fb-icon{
-	width: 14px;
-	height: 14px;
-	margin-right: 5px;
+	s
 	display: inline-block;
 	background-image: url([[pix:theme|sprite-iconos-fb]]);
 	background-repeat: no-repeat;
@@ -15,6 +13,11 @@
 }
 .fb-phone{
 	background-position: -70px -216px;
+}
+.fb-mail,
+.fb-phone{
+	width: 14px;
+	height: 14px;
 }
 
 /*Estilos fonts*/
@@ -183,7 +186,8 @@ ul.dropdown-menu li a{
 .path-course .navbar{
 	margin-bottom: 0px;
 }
-.path-course #page{
+.path-course #page,
+.path-mod-quiz #page{
 	background-image: url([[pix:theme|bg-frontpage1]]);
 	background-position: top right;
 	background-repeat: no-repeat;
@@ -254,10 +258,74 @@ ul.topics li.section .content ul.section li.activity .activityinstance a{
 	border-bottom: 1px solid #555759;
 }
 
+/*Cuestionario*/
+
+.path-mod-quiz h1{
+	color:#047832;
+	font-size: 32px;	
+}
+/*Bloque cuestionario*/
+#mod_quiz_navblock{
+	background-color: #ffffff!important;
+	border: 1px solid #a0a1a2!important;
+}
+#mod_quiz_navblock .header{}
+#mod_quiz_navblock .header h2{
+	color: #144633;
+	font-size: 18px;
+}
+#mod_quiz_navblock .content{
+	background-color: #a0a1a2;
+}
+.path-mod-quiz .qnbutton.notyetanswered{
+	background-color: #007833!important;
+	border: none;
+	border-radius: 4px;
+}
+#mod_quiz_navblock .content .qn_buttons{}
+#mod_quiz_navblock .content .qn_buttons a{
+	color: #ffffff;
+}
+#mod_quiz_navblock a.endtestlink{
+	color: #ffffff;
+}
+
+.path-mod-quiz form .que{}
+.path-mod-quiz form .que .info{
+	width: 100%;
+    background-color: transparent;
+    border: none;
+    float: none;
+}
+.path-mod-quiz form .que .info h3.no:before{
+	content:'> ';
+}
+.path-mod-quiz form .que .info h3.no{
+	display: block;
+	width: 100%;
+	font-size: 21px;
+	color: #007833;
+	border: none!important
+}
+.path-mod-quiz form .que .info .state,
+.path-mod-quiz form .que .info .grade,
+.path-mod-quiz form .que .info .questionflag,
+.path-mod-quiz form .que .info .editquestion{
+	display: none;
+}
 
 
-
-
+.path-mod-quiz form .que .content{
+	width: 100%;
+    margin: 15px 0 15px 0;
+}
+.path-mod-quiz form .que .content .formulation{
+	background-color: transparent;
+	border: 1px solid #b1b1b1;
+}
+.path-mod-quiz form .que .content .formulation .prompt{
+	color: #007833;
+}
 
 
 
