@@ -52,7 +52,7 @@ $contador=0;
 			<div class="row-fluid">
 				<div class="span8">
 					<a href="#">
-						<img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/img-main-frontpage.png.png" alt="">
+						<img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/img-main-frontpage.png" alt="">
 					</a>
 				</div>
 				<div class="span4">

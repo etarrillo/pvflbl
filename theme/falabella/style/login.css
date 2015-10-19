@@ -4,7 +4,8 @@
 #page-login{
 	background-image: url([[pix:theme|bg-login]]);
 	background-position: center center;
-	width: 984px;
+	max-width: 984px;
+	width: 100%;
 	padding: 15px 15px 0 15px;
 	background-color: gray;
 }

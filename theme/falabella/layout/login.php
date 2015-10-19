@@ -40,7 +40,7 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page-login" class="container-fluid">
     <div id="page-content" class="row-fluid">
-        <section id="fb-logo" class="span4">
+        <section class="span4">
             <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-en-falabella.png" alt="">
         </section>
         <section id="fb-form" class="span8">
@@ -55,9 +55,11 @@ echo $OUTPUT->doctype() ?>
         </section>
     </div>
 
-    <footer id="page-footer">
-        <p class="fb-txt-green fb-txt-bold">Soporte virtual</p>
-        <p><span class="fb-icon fb-mail"></span>soporte.escuela@bancofalabella.com | <span class="fb-icon fb-phone"></span>021 529 3000</p>
+    <footer id="page-footer" class="row-fluid">
+        <div class="span12">
+            <p class="fb-txt-green fb-txt-bold">Soporte virtual</p>
+            <p><span class="fb-icon fb-mail"></span>soporte.escuela@bancofalabella.com | <span class="fb-icon fb-phone"></span>021 529 3000</p>
+        </div>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>

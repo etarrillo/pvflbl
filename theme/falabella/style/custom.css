@@ -21,6 +21,9 @@ div.logo {
 [[setting:customcss]]
 body{
     padding-top: 0px;
+    max-width: 1020px!important;
+    width: 100%;
+    margin: 0 auto;
     font-family: 'pf_beausans_proregular';
 }
 
