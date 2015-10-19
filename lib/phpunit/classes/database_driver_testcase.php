@@ -176,7 +176,7 @@ abstract class database_driver_testcase extends PHPUnit_Framework_TestCase {
      * @param string $message
      */
     public function assertDebuggingCalled($debugmessage = null, $debuglevel = null, $message = '') {
-        $debugging = $this->getDebuggingMessages();
+        $debugging = phpunit_util::get_debugging_messages();
         $count = count($debugging);
 
         if ($count == 0) {
@@ -201,7 +201,7 @@ abstract class database_driver_testcase extends PHPUnit_Framework_TestCase {
             $this->assertSame($debuglevel, $debug->level, $message);
         }
 
-        $this->resetDebugging();
+        phpunit_util::reset_debugging();
     }
 
     /**
@@ -209,7 +209,7 @@ abstract class database_driver_testcase extends PHPUnit_Framework_TestCase {
      * @param string $message
      */
     public function assertDebuggingNotCalled($message = '') {
-        $debugging = $this->getDebuggingMessages();
+        $debugging = phpunit_util::get_debugging_messages();
         $count = count($debugging);
 
         if ($message === '') {

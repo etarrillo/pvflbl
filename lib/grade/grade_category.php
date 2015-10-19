@@ -466,7 +466,7 @@ class grade_category extends grade_object {
                      WHERE id $usql";
             $items = $DB->get_records_sql($sql, $params);
             foreach ($items as $id => $item) {
-                $items[$id] = new grade_item($item, false);
+                $items[$id] = new grade_item($item);
             }
         }
 
@@ -501,13 +501,10 @@ class grade_category extends grade_object {
             $grademinoverrides = array();
 
             foreach ($rs as $used) {
-                $grade = new grade_grade($used, false);
+                $grade = new grade_grade($used);
                 if (isset($items[$grade->itemid])) {
                     // Prevent grade item to be fetched from DB.
                     $grade->grade_item =& $items[$grade->itemid];
-                } else if ($grade->itemid == $this->grade_item->id) {
-                    // This grade's grade item is not in $items.
-                    $grade->grade_item =& $this->grade_item;
                 }
                 if ($grade->userid != $prevuser) {
                     $this->aggregate_grades($prevuser,
@@ -885,7 +882,7 @@ class grade_category extends grade_object {
                                                        & $weights = null,
                                                        $grademinoverrides = array(),
                                                        $grademaxoverrides = array()) {
-        $category_item = $this->load_grade_item();
+        $category_item = $this->get_grade_item();
         $grademin = $category_item->grademin;
         $grademax = $category_item->grademax;
 

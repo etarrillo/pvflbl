@@ -1,0 +1,50 @@
+.header-library{
+	margin: 5px 0;
+}
+.header-library a{
+	color: #000066;
+	font-size: 15px;
+}
+.header-library a:hover{
+	text-decoration: underline;
+}
+h3.cabecera-library{
+	font-size: 20px;
+	color: #ff6600;
+}
+table#new-report-table{
+	width: 90%;
+}
+
+table#new-report-table thead{
+	background-color: #006;
+	color: #FFF;
+	padding: 5px 5px 5px 10px;
+	font-weight: bold;
+	font-size: 20px;
+}
+table#new-report-table thead tr{}
+table#new-report-table thead tr th{
+	text-align: left;
+}
+
+table#new-report-table tbody{
+	background-color: transparent;
+}
+table#new-report-table tbody tr{}
+table#new-report-table tbody tr td{
+	padding: 5px 10px;
+	width: 100%;
+	min-height: 35px;
+}
+table#new-report-table tbody tr td a{
+	font-size: 17px;
+	color: #006;
+	text-decoration: none;
+	font-weight: normal;
+	background-color: transparent;
+	padding: 10px;
+}
+table#new-report-table tbody tr td a:hover{
+	text-decoration: underline;
+}

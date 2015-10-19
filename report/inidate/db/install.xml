@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="report/inidate/db" VERSION="2012021400" COMMENT="XMLDB file for Moodle report/inidate"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
+    <TABLES>
+        <TABLE NAME="inidate" COMMENT="Main inidate table." NEXT="inidate_event">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="courseid"/>
+                <FIELD NAME="courseid" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" COMMENT="Id of course" PREVIOUS="id" NEXT="type"/>
+                <FIELD NAME="type" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Type of dateini" PREVIOUS="courseid" NEXT="type_action"/>
+                <FIELD NAME="type_action" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Type of action" PREVIOUS="type" NEXT="groupid"/>
+                <FIELD NAME="groupid" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Id of group" PREVIOUS="type_action" NEXT="date"/>
+                <FIELD NAME="date" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Date" PREVIOUS="groupid" />
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+
+        <TABLE NAME="inidate_event" COMMENT="Conexion inidate event table." PREVIOUS="inidate">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="idinidate"/>
+                <FIELD NAME="idinidate" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="id" NEXT="idevent"/>
+                <FIELD NAME="idevent" TYPE="int" LENGTH="11" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="idinidate"/>
+            </FIELDS>
+            <KEYS>
+               <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+
+    </TABLES>
+</XMLDB>

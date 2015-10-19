@@ -188,6 +188,10 @@
 	background-position: right 11px;
 }
 /*Frontpage*/
+body#page-report-courseall-index{
+	width: 1024px!important;
+	margin: 0 auto!important;
+}
 .fb-block{}
 .fb-block .fb-block-header{}
 .fb-block .fb-block-header h3{
