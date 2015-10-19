@@ -18,6 +18,7 @@
 .fb-phone{
 	width: 14px;
 	height: 14px;
+	display: inline-block;
 }
 
 /*Estilos fonts*/
@@ -37,9 +38,6 @@
 
 #fb-breadcrumb{
 	width: 77%;
-	background-color: #047832;
-    border-radius: 5px 0px 0px 5px;
-    height: 36px;
 }
 #fb-user-menu{
 	width: 22%;
@@ -259,6 +257,9 @@ ul.topics li.section .content ul.section li.activity .activityinstance a{
 	text-align: right;
 	border-top: 1px solid #555759;
 	border-bottom: 1px solid #555759;
+}
+#page-footer p{
+	text-align: right;
 }
 
 /*Cuestionario*/

@@ -110,9 +110,11 @@ echo $OUTPUT->doctype() ?>
         ?>
     </div>
 
-    <footer id="page-footer">
-        <p class="fb-txt-green fb-txt-bold">Soporte virtual</p>
-        <p><span class="fb-icon fb-mail"></span>soporte.escuela@bancofalabella.com | <span class="fb-icon fb-phone"></span>021 529 3000</p>
+    <footer id="page-footer" class="row-fluid">
+        <div class="span12">
+            <p class="fb-txt-green fb-txt-bold">Soporte virtual</p>
+            <p><span class="fb-icon fb-mail"></span>soporte.escuela@bancofalabella.com | <span class="fb-icon fb-phone"></span>021 529 3000</p>
+        </div>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>
