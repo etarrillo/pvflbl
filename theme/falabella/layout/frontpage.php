@@ -62,7 +62,7 @@ echo $OUTPUT->doctype() ?>
         <div class="row-fluid">
             <div class="span12" id="fb-space-logo">
                 <div class="span2">
-                    <img style="margin-left:20px;" class="fb-responsive" src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-en-falabella.png" alt="">                    
+                    <img style="margin-left:20px;max-width:200px;" class="fb-responsive" src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-en-falabella.png" alt="">                    
                 </div>
                 <div class="span3">
                     <img style="margin-top:30px;" src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-banco-falabella-dentro.png" alt="">
@@ -73,23 +73,24 @@ echo $OUTPUT->doctype() ?>
         
         <div class="row-fluid">
             <div class="span12" id="fb-menu">
-                <div class="navbar">
-                    <nav role="navigation" id="fb-main-menu">
-                        <div class="container-fluid">
-                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <div class="nav-collapse collapse">
-                                <?php echo $OUTPUT->custom_menu(); ?>
-                                <!-- <ul class="nav pull-right">
-                                    <li><?php echo $OUTPUT->page_heading_menu(); ?></li>
-                                </ul> -->
-                            </div>
-                        </div>
-                    </nav>
-                </div>
+            <nav id="nav" role="navigation">
+                <a href="#nav" title="Show navigation">Mostrar Menú</a>
+                <a href="#" title="Hide navigation">Ocultar Menú</a>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li>
+                        <a href="/" aria-haspopup="true">Programas</a>
+                        <ul>
+                            <li><a href="/">Categoria 1</a></li>
+                            <li><a href="/">Categoria 2</a></li>
+                            <li><a href="/">Categoria 3</a></li>
+                            <li><a href="/">Categoria 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/" aria-haspopup="true">Calificaciones</a></li>
+                    <li><a href="/">Biblioteca</a></li>
+                </ul>
+            </nav>
             </div>
         </div>
         

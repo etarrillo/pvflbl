@@ -97,7 +97,7 @@ a.toggle-display{
     position: relative;
     top: 0px;
     display: inline-block;
-    left: 130px;
+    /*left: 130px;*/
 }
 .jsenabled .usermenu .moodle-actionmenu.show {
     background-color: #4b4c4e;
