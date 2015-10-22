@@ -43,14 +43,15 @@ if($data = $mform->get_data()){
 	$record['name'] = $data->name;
 	$record['fullname'] = 'curso';
     $record['userid'] = $USER->id;
+    $record['category'] = $data->category;
     $record['timecreate'] = time();
     $record['timemodified'] = time();
 	if(empty($i)) $record['state'] = 0;
     
 	//$record['htmlfront'] = $html;
 
-	$ruta = $CFG->dirroot .'/local/library';
-
+	//$ruta = $CFG->dirroot .'/local/library';
+    $ruta=$CFG->dataroot.'/local';
 	if(empty($i)){
 
 			$entryid = $DB->insert_record('library',$record,true);

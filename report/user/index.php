@@ -31,24 +31,18 @@ $html.='<div id="region-main" class="body-perfil">
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">
-					<h2 class="fb-txt-green fb-title">Actualizar perfil</h2>
+					<h2 class="fb-txt-green fb-title">Título de la actividad o curso</h2>
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span6" id="fb-user-img">
+				<div class="span6">
 					<img class="pull-right" src="'.$pictururl.'" alt="">
 				</div>
 				<div class="span6">
-					<ul class="fb-user-list">
-						<li class="fb-txt-gray">
-							<span class="fb-txt-green">Nombres: </span>'.$USER->firstname.'
-						</li>
-						<li class="fb-txt-gray">
-							<span class="fb-txt-green">Apellidos: </span>'.$USER->lastname.'
-						</li>
-						<li class="fb-txt-gray">
-							<span class="fb-txt-green">DNI: </span>487654321
-						</li>
+					<ul class="">
+						<li class="fb-txt-gray"><span class="fb-txt-green">Nombres: </span>'.$USER->firstname.'</li>
+						<li class="fb-txt-gray"><span class="fb-txt-green">Apellidos: </span>'.$USER->lastname.'</li>
+						<li class="fb-txt-gray"><span class="fb-txt-green">DNI: </span>487654321</li>
 					</ul>
 				</div>
 			</div>

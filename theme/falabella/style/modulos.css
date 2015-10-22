@@ -109,7 +109,7 @@
 .fb-title-modules-cal{
 	font-size: 24px;
 	background-color: white;
-	padding: 10px;
+	padding: 5px;
 	width: 60%;
 	font-weight: lighter;
 	border-radius: 0 10px 10px 0;
@@ -117,7 +117,7 @@
 .fb-title-modules-biblioteca{
 	font-size: 24px;
 	background-color: white;
-	padding: 10px;
+	padding: 5px;
 	width: 60%;
 	border-radius: 0 10px 10px 0;
 }
@@ -140,7 +140,6 @@
 /*Categorias*/
 .fb-list-main-category{
 	display: inline-block;
-    width: 48%;
     vertical-align: top;
     margin-right: 10px;
 }
@@ -149,6 +148,9 @@
 	border-radius: 10px;
 	padding: 5px;
 	margin: 5px;
+	width: 47%;
+	display: inline-block;
+	vertical-align: top;
 }
 .fb-list-main-category .fb-category h4{
 	font-size: 17px;
@@ -196,18 +198,31 @@
 	background-position: top center;
 	-webkit-background-size: 96%;
 	background-size: 96%;
-}
-.body-calificaciones h2,
-.body-biblioteca h2{
+	min-height: 555px;
 	margin-top: 15px;
 }
+
+.body-biblioteca h2{
+	margin-top: 23px;
+}
+.body-calificaciones h2{
+	margin-top: 23px;
+}
 /*Frontpage*/
+.path-report-courseall #fb-menu{
+	margin-bottom: 20px;
+}
+#page-report-courseall-view{
+	background-image: url([[pix:theme|bg-frontpage1]]);
+	background-repeat: no-repeat;
+	background-position: 75% 32%;
+}
 .path-report-courseall,
 .path-report-gradesall,
 .path-local-library,
 .path-report-user{
 	width: 1020px;
-	padding: 10px;
+	padding: 0 10px 10px 10px;
 	margin: 0 auto;
 }
 .path-report-courseall header#page-header,
@@ -353,8 +368,9 @@
 
 	#nav > ul
 	{
-		height: 3.75em; /* 60 */
+		height: 35px;
 		margin: 0px!important;
+		border-radius: 10px;
 	}
 		#nav > ul > li
 		{
@@ -363,11 +379,14 @@
 			float: left;
 			list-style: none;
 		}
+		#nav > ul > li:first-child{
+			border-radius: 10px;
+		}
 			#nav > ul > li > a
 			{
 				height: 100%;
 				font-size: 17px; /* 24 */
-				line-height: 3.3em; /* 60 (24) */
+				line-height: 2.2em; /* 60 (24) */
 				text-align: center;
 			}
 				#nav > ul > li:not( :last-child ) > a
@@ -396,19 +415,21 @@
 				display: block;
 				left: 0;
 				right: 0;
+				border-radius: 0 0 10px 10px;
 			}
 				#nav li:not( :first-child ):hover ul
 				{
 					left: -1px;
-					width: 160px;
+					width: 190px;
 					margin-left: 0;
 					padding-left: 0px;
 				}
 				#nav li ul a
 				{
-					font-size: 14px; /* 20 */
+					font-size: 13px; /* 20 */
 					border-top: 1px solid #144633;
-					padding: 0.75em; /* 15 (20) */
+					padding: 0.75em 2em; /* 15 (20) */
+					text-transform: capitalize;
 				}
 					#nav li ul li a:hover,
 					#nav li ul:not( :hover ) li.active a

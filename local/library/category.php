@@ -33,15 +33,16 @@ $newlink = new moodle_url('/local/library/editcat.php',array('id'=>0));
 $newslink = new moodle_url('/local/library/index.php');
 
 echo html_writer::start_tag('div');
-	echo html_writer::tag('a','Agregar Categoria',array('href'=>$newlink));
+	echo html_writer::tag('a','Agregar Categoria',array('href'=>$newlink, 'style'=>'margin-bottom:10px;display:inline-block;', 'class'=>'fb-btn'));
+
 echo html_writer::end_tag('div');
 
 
 echo html_writer::start_tag('div');
-	echo html_writer::tag('a','Biblioteca',array('href'=>$newslink));
+	echo html_writer::tag('a','Biblioteca',array('href'=>$newslink, 'style'=>'margin-bottom:10px;display:inline-block;', 'class'=>'fb-btn'));
 echo html_writer::end_tag('div');
 
-echo html_writer::start_tag('table',array('align'=>'center'));
+echo html_writer::start_tag('table',array('class'=>'table table-striped"', 'align'=>'center'));
 	echo html_writer::start_tag('thead');
 		echo html_writer::start_tag('tr');
 			echo html_writer::tag('td','Nombre');
@@ -56,8 +57,8 @@ echo html_writer::start_tag('table',array('align'=>'center'));
 		echo html_writer::start_tag('tr');
 			echo html_writer::tag('td',$c->name);	
 			echo html_writer::start_tag('td');
-				echo html_writer::tag('a',get_string('edit'),array('href'=>$edituri));
-				echo html_writer::tag('a',get_string('delete'),array('href'=>$deleteuri));
+				echo html_writer::tag('a',get_string('edit'),array('href'=>$edituri, 'style'=>'margin-bottom:10px;display:inline-block;', 'class'=>'fb-btn'));
+				echo html_writer::tag('a',get_string('delete'),array('href'=>$deleteuri, 'style'=>'margin-bottom:10px;display:inline-block;', 'class'=>'fb-btn'));
 			echo html_writer::end_tag('td');
 		echo html_writer::end_tag('tr');
 	}

@@ -31,12 +31,13 @@
 #page-footer p.fb-txt-green.fb-txt-bold{
 	font-size: 14px;
 }
-#page-footer{
-	padding: 0px!important;
+#page-login #page-footer{
+	padding: 8px!important;
 }
-#page-footer p{
+#page-login #page-footer p{
 	font-size: 12px;
 	line-height: 24px;
+	margin:0px;
 }
 /*Formulario*/
 .loginbox{}

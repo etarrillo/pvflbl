@@ -21,7 +21,7 @@
  * @copyright 2012 Bas Brands, www.basbrands.nl
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+global $DB,$CFG;
 // Set default (LTR) layout mark-up for a two column page (side-pre-only).
 $regionmain = 'span9 pull-right';
 $sidepre = 'span3 desktop-first-column';
@@ -53,13 +53,31 @@ echo $OUTPUT->doctype() ?>
                 <?php echo $OUTPUT->navbar(); ?>
             </div>
             <div id="fb-user-menu">
-                <?php echo $OUTPUT->user_menu(); ?>
+                <div class="btn-group">
+                <!-- Jalamos la imagen del usuario -->
+                <!-- hay una función especial para esto, por el momento jalaré una del tema y le daré estilos -->
+                    <span class="fb-img-user">
+                        <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/f2.png">
+                    </span>
+
+                <!-- Imprimimos el nombre del usuario-->
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span> <?php echo $USER->firstname.' '.$USER->lastname ?> </span>
+                    <span class="caret"></span>
+                  </a>
+                  <!-- Imprimimos la lista-->
+                  <ul class="dropdown-menu">
+                    <li><a href="/report/user/index.php">Editar Perfil</a></li>
+                    <li><a href="#">Cambiar Contraseña</a></li>
+                    <li><a href="<?php echo $CFG->wwwroot.'/login/logout.php?sesskey='.$USER->sesskey?>">Cerrar Sesión</a></li>
+                  </ul>
+                </div>
             </div>
         </div>
         <div class="row-fluid">
             <div class="span12" id="fb-space-logo">
-                <a class="brand" href="<?php echo $CFG->wwwroot;?>">
-                    <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-banco-falabella.png" alt="">
+                <a class="brand" href="<?php echo $CFG->wwwroot;?>/report/courseall/index.php">
+                    <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-inside.png" alt="">
                 </a>
             </div>
         </div>
@@ -70,22 +88,25 @@ echo $OUTPUT->doctype() ?>
                 <a href="#nav" title="Show navigation">Mostrar Menú</a>
                 <a href="#" title="Hide navigation">Ocultar Menú</a>
                 <ul>
-                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/report/courseall/index.php">Inicio</a></li>
                     <li>
-                        <a href="/" aria-haspopup="true">Programas</a>
+                        <a href="/report/courseall/view.php" aria-haspopup="true">Programas</a>
                         <ul>
-                            <li><a href="/">Categoria 1</a></li>
-                            <li><a href="/">Categoria 2</a></li>
-                            <li><a href="/">Categoria 3</a></li>
-                            <li><a href="/">Categoria 4</a></li>
+                        <?php $categorys  = $DB->get_records('course_categories',array('parent'=>2));
+                         foreach ($categorys as $categorysid => $categorysvalue) {
+                            $url = new moodle_url('/report/courseall/category.php',array('id'=>$categorysvalue->id));
+                               echo '<li><a href="'.$url.'" >'.$categorysvalue->name.'</a></li>';
+                            
+                         }  ?>
+
                         </ul>
                     </li>
-                    <li><a href="/" aria-haspopup="true">Calificaciones</a></li>
-                    <li><a href="/">Biblioteca</a></li>
+                    <li><a href="/report/gradesall/index.php" aria-haspopup="true">Calificaciones</a></li>
+                    <li><a href="/local/library/view.php">Biblioteca</a></li>
                 </ul>
             </nav>
             </div>
-        </div>      
+        </div>        
     </div>
 </header>
 

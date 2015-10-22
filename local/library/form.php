@@ -12,7 +12,7 @@ class local_library_library extends moodleform {
         $mform->addElement('header', 'new', get_string('new','local_library'));
         $mform->addElement('select','category',get_string('category'),$categorys, array());
         $mform->addElement('text','name', get_string('name','local_library'));
-        $mform->addElement('filepicker', 'file', 'Paquete*', null,array('maxbytes' => 6000700, 'accepted_types' => '*'));
+        $mform->addElement('filepicker', 'file', 'Paquete*', null,array('maxbytes' => 36000700, 'accepted_types' => '*'));
 
 
         $mform->setType('name',PARAM_TEXT);

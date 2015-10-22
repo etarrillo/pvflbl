@@ -13,7 +13,7 @@ $url = new moodle_url('/report/gradesall/index.php', array());
 $PAGE->set_url($url);
 
 require_capability('report/gradesall:view', context_system::instance());
-
+$PAGE->navbar->add('Mis Calificaciones');
 echo $OUTPUT->header();
 
 
@@ -126,8 +126,7 @@ $html.='<div id="region-main" class="body-calificaciones">
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>';
+		</div>';
 
 	echo $html;
 /*

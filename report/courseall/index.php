@@ -14,10 +14,10 @@ $url = new moodle_url('/report/courseall/index.php', array());
 $PAGE->set_url($url);
 
 require_capability('report/courseall:view', context_system::instance());
-
+$PAGE->navbar->add(get_string('mycourse','report_courseall'));
 
 $PAGE->set_title(get_string('mycourse','report_courseall'));
-$PAGE->set_heading(get_string('mycourse','report_courseall'));
+//$PAGE->set_heading(get_string('mycourse','report_courseall'));
 
 
 echo $OUTPUT->header();
@@ -47,12 +47,12 @@ $firstcat='';
 $temp = '';
 $contador=0;
 
- $temp.='<div class="body-frontpage">
+ $temp.='<div id="region-main" class="body-frontpage">
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span8">
 					<a href="#">
-						<img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/img-main-frontpage.png" alt="">
+						<img src="pix/img-main-frontpage.png" alt="">
 					</a>
 				</div>
 				<div class="span4">
@@ -175,7 +175,7 @@ $contador=0;
 								Cursos Calificaciones
 							</h3>
 							<p class="fb-txt-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit <span class="fb-txt-green">Calificación aprobatoria es de 14</span> blanditiis maxime placeat sint vero sunt illum. Asperiores unde alias fuga, rerum.</p>
-							<a class="pull-right fb-btn" href="#">Ver Calificaciones <span class="fb-icon fb-link-curso"></span></a>
+							<a class="pull-right fb-btn" href="'.new moodle_url('/report/gradesall/index.php', array()).'">Ver Calificaciones <span class="fb-icon fb-link-curso"></span></a>
 						</div>
 					</div>
 				</div>

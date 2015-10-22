@@ -3,7 +3,6 @@
 }
 /*Clases generales de los iconos*/
 .fb-icon{
-	s
 	display: inline-block;
 	background-image: url([[pix:theme|sprite-iconos-fb]]);
 	background-repeat: no-repeat;
@@ -40,7 +39,7 @@
 	width: 77%;
 }
 #fb-user-menu{
-	width: 22%;
+	width: 20%;
 }
 #fb-breadcrumb,
 #fb-user-menu{
@@ -56,10 +55,12 @@
 #fb-breadcrumb ul.breadcrumb li a{
 	color: #ffffff;
 	text-shadow:none;
+	font-size: 12px;
 }
 #fb-breadcrumb ul.breadcrumb li span{
 	color: #ffffff;
 	text-shadow:none;
+	font-size: 12px;
 }
 #fb-breadcrumb ul.breadcrumb li span.divider{
 	background-image: url([[pix:theme|sprite-iconos-fb]]);
@@ -74,8 +75,34 @@
 #fb-user-menu{
 	margin-left: -4px;
 	background-color: #555759;
-	border-radius: 0px 0px 10px 10px;
-	padding: 20px 0px 0px 0px;
+	border-radius: 0px 0px 7px 7px;
+	padding: 25px 0 0 10px;
+}
+#fb-user-menu .btn{
+	color: #ffffff!important;
+	border: none!important;
+	text-shadow: none!important;
+	box-shadow: none!important;
+}
+#fb-user-menu .btn,
+#fb-user-menu .btn:hover{
+	border: none!important;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+0,0+100;White+to+Transparent */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+#fb-user-menu .btn a{
+	color: #ffffff!important;
+}
+#fb-user-menu .fb-img-user{
+	margin-bottom: 10px;
+	display: inline-block;
 }
 .dir-ltr .usermenu{
 	float: none;
@@ -126,8 +153,8 @@ a.toggle-display{
 }
 /*Logos del header*/
 #fb-space-logo{
-	margin-top: 10px;
-	margin-bottom: 30px;
+	margin-top: 0px;
+	margin-bottom: 20px;
 }
 /*Menu principal*/
 nav#fb-main-menu{
@@ -170,7 +197,7 @@ ul.dropdown-menu li a{
 .dropdown-menu>li>a:focus,
 .dropdown-submenu:hover>a,
 .dropdown-submenu:focus>a{
-	width: 90%;
+	width: 87%;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#144633+0,144633+100 */
 	background: rgb(20,70,51); /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -230,7 +257,7 @@ ul.flexsections li.section .content h3.sectionname{
 	text-transform: uppercase;
 }
 ul.flexsections li.section .content ul.section{
-	width: 60%;
+	width: 70%;
 }
 ul.flexsections li.section .content ul.section li.activity{
 	border: 1px solid #b1b1b1;
@@ -257,15 +284,16 @@ ul.flexsections li.section .content ul.section li.activity .activityinstance a{
 
 /*footer*/
 #page-footer{
+	padding: 8px!important;
 	background-image: url([[pix:theme|bg-footer]]);
 	background-repeat: no-repeat;
-	background-position: center right;
 	text-align: right;
 	border-top: 1px solid #555759;
 	border-bottom: 1px solid #555759;
 }
 #page-footer p{
 	text-align: right;
+	margin: 0px!important;
 }
 
 /*Cuestionario*/

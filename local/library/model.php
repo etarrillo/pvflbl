@@ -9,20 +9,24 @@ Class library_Model{
 		$this->db = $DB;
 	}
 
-	public function get_librarys($id=0){
-		if($id == 0) return $this->db->get_records('library',array(),'name','id,name,state');
-		else  return (array)$this->db->get_record('library',array('id'=>$id),'*',MUST_EXIST);
+	public function get_librarys($id){
+		
+             $sql = "SELECT l.name,l.state,l.category,l.id  FROM {library} l
+		        INNER JOIN {library_category} lc on lc.id=l.category where l.category=? ";
+               $params = array($id);
+
+		      return $this->db->get_records_sql($sql,$params);
+            
 	}
 
 
 
 
-	public function get_category($i=0,$c=0){
-		if(empty($c)){
-			return $this->db->get_records('library_category',array('vid'=>$i));
-		}else{
-			return (array)$this->db->get_record('library_category',array('id'=>$c));	
-		}
+
+
+	public function get_category(){
+		
+			return $this->db->get_records('library_category',array());
 		
 	}
 
