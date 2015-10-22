@@ -302,7 +302,27 @@
 	width: 40%;
 	color: #ffffff;
 }
-
+.fb-icon-program{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-position: -68px -318px;
+}
+.fb-box-border{
+	border: 1px solid #a0a1a2;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 11px;
+}
+#fb-front-block{}
+#fb-front-block a{
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#fb-front-block a:hover{
+	color: #232323;
+}
 
 
 /*Menu*/
