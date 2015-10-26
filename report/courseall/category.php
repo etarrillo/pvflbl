@@ -60,13 +60,13 @@ $contador=0;
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span7">
+				<div class="span8">
 					<div class="fb-table">						
 						<div class="fb-table-header fb-txt-green">
-							<span class="fb-ancho30">Curso</span>
-							<span class="fb-ancho20">Inicio</span>
-							<span class="fb-ancho20">Fin</span>
-							<span class="fb-ancho20">Estado</span>
+							<span class="fb-ancho45">Curso</span>
+							<span class="fb-ancho15">Inicio</span>
+							<span class="fb-ancho15">Fin</span>
+							<span class="fb-ancho15">Estado</span>
 						</div>';
 
 
@@ -161,66 +161,31 @@ $contador=0;
 			$params_a=array($onecourse->courseid,$USER->id);
 
 			$grade = $DB->get_field_sql($sql_a, $params_a);
-
+             $ruta =new moodle_url('/course/view.php', array('id'=>$onecourse->courseid));
 			 $temp.='<div class="fb-table-body">
-							<span class="fb-ancho30">
-								<span class="fb-icon fb-icon-course">&nbsp;</span>
-								<a href="#" class="fb-txt-green">Data 1</a>
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-10-2015
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-12-2015
-							</span>
-							<span class="fb-txt-green-dark fb-ancho20">
-								Finalizado
-							</span>
-						</div>';
+							<span class="fb-ancho45">
+								<span class="fb-icon fb-icon-course">&nbsp;</span>';
+								if($final_condition){
 
-			/*$temp.=  html_writer::start_tag('tr',array('class'=>'row-grade'));
+								$temp.='<a href="'.$ruta.'" class="fb-txt-green">'.$onecourse->course.'</a></span>';
+							    }else{
+								$temp.='<a href="" class="fb-txt-green">'.$onecourse->course.'</a></span>';
+							    }
+					$temp.='<span class="fb-txt-gray fb-ancho15">'. date('d-m-Y',$inidate).'</span>';
+					$temp.='<span class="fb-txt-gray fb-ancho15">'. date('d-m-Y',$findate).'</span>';
+                       if($DB->record_exists('grade_items',array('courseid'=>$onecourse->courseid,'itemmodule'=>'quiz'))){
+								if($grade){
+									$temp.='<span class="fb-txt-green-dark fb-ancho15">Finalizado</span>'; 
+								}else{
+									$temp.= '<span class="fb-txt-green-dark fb-ancho15">En proceso</span>'; 
+								}					
+					    }else{
+						            $temp.= '<span class="fb-txt-green-dark fb-ancho15">------------</span>'; 	
+					        }
 
-				$temp.=  html_writer::start_tag('td',array('class'=>'course-name'));		
+			$temp.= '</div>';
 
-					if($final_condition){
-						$temp.=  html_writer::tag('a',$onecourse->course,array('href'=>new moodle_url('/course/view.php', array('id'=>$onecourse->courseid))));	
-					}else{
-						$temp.=  html_writer::tag('span',$onecourse->course);	
-					}
-					
-				
-				$temp.=  html_writer::end_tag('td');
 
-				$temp.=  html_writer::start_tag('td',array('class'=>'date-ini'));
-
-					$temp.=  html_writer::tag('span', ($inidate == 0)? '-' : date('d-m-Y',$inidate) );
-
-				$temp.=  html_writer::end_tag('td');
-
-				$temp.=  html_writer::start_tag('td',array('class'=>'date-end'));
-
-					$temp.=  html_writer::tag('span', ($findate == 0)? '-' : date('d-m-Y',$findate) );
-
-				$temp.=  html_writer::end_tag('td');
-					
-					$temp.=  html_writer::start_tag('td',array('class'=>'date-end'));
-
-	
-					if($DB->record_exists('grade_items',array('courseid'=>$onecourse->courseid,'itemmodule'=>'quiz'))){
-						if($grade){
-							$temp.=  html_writer::tag('span','En proceso');
-						}else{
-							$temp.=  html_writer::tag('span','En proceso');
-						}					
-					}else{
-						$temp.=  html_writer::tag('span','---------------');	
-					}
-
-					
-
-					$temp.=  html_writer::end_tag('td');
-
-			$temp.=  html_writer::end_tag('tr')*/	
 		}
 	}
 
@@ -230,12 +195,14 @@ $contador=0;
 
  $temp.='</div>
 				</div>
-				<div class="span5">
-					<img src="pix/personaje.png" alt="">
+				<div class="span4">
+					<img class="img-responsive pull-right" src="pix/personaje.png" alt="">
 				</div>
 			</div>
 		</div>
-	';
+	</div>';
+
+
 
 	
 	echo $temp;

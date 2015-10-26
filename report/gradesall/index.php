@@ -53,83 +53,13 @@ $html.='<div id="region-main" class="body-calificaciones">
 						Historial de calificaciones
 					</h2>
 				</div>
-			</div>
-			<div class="row-fluid">
-				<div class="span10">
-					<div class="fb-table">
-						<div class="fb-table-header fb-txt-green">
-							<span class="fb-ancho40">Negocios</span>
-							<span class="fb-ancho20">Inicio</span>
-							<span class="fb-ancho20">Fin</span>
-							<span class="fb-ancho10">Calificación</span>
-						</div>
-						<div class="fb-table-body">
-							<span class="fb-ancho40">
-								<span class="fb-icon fb-icon-course">&nbsp;</span>
-								<a href="#" class="fb-txt-green">Data 1</a>
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-10-2015
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-12-2015
-							</span>
-							<span class="fb-ancho10 fb-nota-aprobada">
-								20
-							</span>
-						</div>
-						<div class="fb-table-body">
-							<span class="fb-ancho40">
-								<span class="fb-icon fb-icon-course">&nbsp;</span>
-								<a href="#" class="fb-txt-green">Data 1</a>
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-10-2015
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-12-2015
-							</span>
-							<span class="fb-ancho10 fb-nota-desaprobada">
-								10
-							</span>
-						</div>
-						<div class="fb-table-body">
-							<span class="fb-ancho40">
-								<span class="fb-icon fb-icon-course">&nbsp;</span>
-								<a href="#" class="fb-txt-green">Data 1</a>
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-10-2015
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-12-2015
-							</span>
-							<span class="fb-ancho10 fb-nota-aprobada">
-								18
-							</span>
-						</div>
-						<div class="fb-table-body">
-							<span class="fb-ancho40">
-								<span class="fb-icon fb-icon-course">&nbsp;</span>
-								<a href="#" class="fb-txt-green">Data 1</a>
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-10-2015
-							</span>
-							<span class="fb-txt-gray fb-ancho20">
-								12-12-2015
-							</span>
-							<span class="fb-ancho10 fb-nota-desaprobada">
-								09
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>';
+			</div><div class="row-fluid">
+				<div class="span10">';
 
-	echo $html;
-/*
+
+			
+	
+
 	foreach($allgrades as $grade){
 
 		if(empty($grade->fgrade)){	
@@ -138,27 +68,22 @@ $html.='<div id="region-main" class="body-calificaciones">
 			$grade->fgrade=number_format ($grade->fgrade,2);
 		}
 
+
+$html.='<div class="fb-table">';
 		if($firstcat!=$grade->category){
-			if($firstcat!=''){
-
-				echo html_writer::end_tag('table');
-			}
-
+	
 			$firstcat=$grade->category;
 
-
-                echo html_writer::start_tag('table',array('class'=>'category-gradesall'));
-				echo html_writer::start_tag('tr');
-					echo html_writer::tag('th',$grade->category, array('class'=>'category-name'));
-					echo html_writer::tag('th','Inicio');
-					echo html_writer::tag('th','Fin');
-					echo html_writer::tag('th','Nota');
-				echo html_writer::end_tag('tr');
+            $html.='
+						<div class="fb-table-header fb-txt-green">
+							<span class="fb-ancho40">'.$grade->category.'</span>
+							<span class="fb-ancho20">Inicio</span>
+							<span class="fb-ancho20">Fin</span>
+							<span class="fb-ancho10">Calificación</span>
+						</div>';
+               
 
 		}
-
-
-		echo html_writer::start_tag('tr',array('class'=>'row-grade'));
 
 
             $condition_course = $DB->get_records('inidate',array('courseid'=> $grade->courseid,'type'=>'course'),'id,date,type_action');
@@ -199,35 +124,46 @@ $html.='<div id="region-main" class="body-calificaciones">
 
 			    $groupini = $DB->get_record_sql($sql_group, array($grade->courseid,$USER->id,'ini',$idgroup));
 			    
+             
+                    $html.='<div class="fb-table-body">
+							<span class="fb-ancho40">
+								<span class="fb-icon fb-icon-course">&nbsp;</span>
+								<a href="" class="fb-txt-green">'.$grade->course.'</a>
+							</span>
 
-			echo html_writer::tag('td',$grade->course,array('class'=>'course-name'));
+							<span class="fb-txt-gray fb-ancho20">';
 
-			if(!empty($groupini)){
+					       if(!empty($groupini)){
 
-				echo html_writer::tag('td',date('d-m-Y',$groupini->date),array('class'=>'date-ini'));
-			}else{
-				echo html_writer::tag('td','-',array('class'=>'date-ini'));
-			}
-            
+				             $html.= date('d-m-Y',$groupini->date);
+			                 }else{
+				             $html.= '-';
+			                }
+							$html.='</span><span class="fb-txt-gray fb-ancho20">';
 
-			if(!empty($groupend)){
+							if(!empty($groupend)){
 
-				echo html_writer::tag('td',date('d-m-Y',$groupend->date),array('class'=>'date-ini'));
-			}else{
-				echo html_writer::tag('td','-',array('class'=>'date-ini'));
-			}
-            	
-			
-			echo html_writer::tag('td',$grade->fgrade,array('class'=>'finalgrade'));
+								$html.= date('d-m-Y',$groupend->date);
+							}else{
+								$html.= '-';
+							}
+						
+							$html.='</span>';
+							if($grade->fgrade>=14){
+								$html.='<span class="fb-ancho10 fb-nota-aprobada">'.$grade->fgrade.'</span>';
 
+							}else{
+                                 $html.='<span class="fb-ancho10 fb-nota-desaprobada">'.$grade->fgrade.'</span>';
+							}
 
-		echo html_writer::end_tag('tr');		
+							$html.='</div>';
+		
 	}
 
+$html.='</div></div></div></div>';
 
 
-
-echo html_writer::end_tag('table');*/
+echo $html;
 
 
 echo $OUTPUT->footer();

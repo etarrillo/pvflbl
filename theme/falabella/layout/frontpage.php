@@ -41,6 +41,19 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+        <script src="<?php echo $CFG->themedir;?>/javascript/html5shiv.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        // HACER UNA VALIDACION PARA ADMINISTRADORES Y ESTUDIANTES
+        <?php if (!is_siteadmin()) { ?>
+            location.href="<?php echo $CFG->wwwroot?>/report/courseall/index.php"
+        <?php } ?>
+        //EVITAR LA VALIDACION                   
+    </script>
+
+
+
 </head>
 
 <body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
@@ -95,7 +108,7 @@ echo $OUTPUT->doctype() ?>
                     <li>
                         <a href="/report/courseall/view.php" aria-haspopup="true">Programas</a>
                         <ul>
-                        <?php $categorys  = $DB->get_records('course_categories',array('parent'=>2));
+                        <?php $categorys  = $DB->get_records('course_categories',array('parent'=>1));
                          foreach ($categorys as $categorysid => $categorysvalue) {
                             $url = new moodle_url('/report/courseall/category.php',array('id'=>$categorysvalue->id));
                                echo '<li><a href="'.$url.'" >'.$categorysvalue->name.'</a></li>';
@@ -126,6 +139,8 @@ echo $OUTPUT->doctype() ?>
         <?php echo $OUTPUT->blocks('side-pre', $sidepre);
         ?>
     </div>
+
+
 
     <footer id="page-footer" class="row-fluid">
         <div class="span12">

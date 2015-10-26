@@ -17,7 +17,7 @@ $PAGE->navbar->add('Programas');
 echo $OUTPUT->header();
 
  $html = '';
-$categorys  = $DB->get_records('course_categories',array('parent'=>2));
+$categorys  = $DB->get_records('course_categories',array('parent'=>1));
 
 
 
@@ -36,7 +36,7 @@ $html.='<div id="region-main">
 			';
 
  foreach ($categorys as $key => $value) {
- 	$ruta= new moodle_url('/course/index.php', array('categoryid'=>$value->id));
+ 	$ruta= new moodle_url('category.php', array('id'=>$value->id));
  	$html.='
 				<div class="fb-category">
 					<h4><span class="fb-icon fb-icon-title-category">&nbsp;</span>'.$value->name.'</h4>

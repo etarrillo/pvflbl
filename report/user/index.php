@@ -12,7 +12,7 @@ require_login($course);
 $url = new moodle_url('/report/user/index.php', array());
 
 $PAGE->set_url($url);
-
+$PAGE->navbar->add('Editar Información');
 
 require_capability('report/user:view',context_system::instance());
 

@@ -92,7 +92,7 @@ echo $OUTPUT->doctype() ?>
                     <li>
                         <a href="/report/courseall/view.php" aria-haspopup="true">Programas</a>
                         <ul>
-                        <?php $categorys  = $DB->get_records('course_categories',array('parent'=>2));
+                        <?php $categorys  = $DB->get_records('course_categories',array('parent'=>1));
                          foreach ($categorys as $categorysid => $categorysvalue) {
                             $url = new moodle_url('/report/courseall/category.php',array('id'=>$categorysvalue->id));
                                echo '<li><a href="'.$url.'" >'.$categorysvalue->name.'</a></li>';

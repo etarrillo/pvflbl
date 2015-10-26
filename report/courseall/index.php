@@ -47,15 +47,57 @@ $firstcat='';
 $temp = '';
 $contador=0;
 
+$imagen =  $CFG->wwwroot.'/theme/falabella/pix/img-main-frontpage.png';
+ 
  $temp.='<div id="region-main" class="body-frontpage">
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span8">
-					<a href="#">
-						<img src="pix/img-main-frontpage.png" alt="">
-					</a>
+				<!-- se agregó este bloque inicio-->
+				<div class="span7" id="fb-front-block">
+					<h2 class="fb-title fb-txt-green">Crecimiento Rentabilidad Sostenibilidad</h2>
+					<h3 class="fb-subtitle">Centro de liderazgo</h3>
+					<div class="fb-facultades">
+						<div class="ancho45 fb-box-border">
+							<span class="fb-icon fb-icon-course">&nbsp;</span>
+							<a class="fb-txt-green-dark" href="#">Facultad Comercial</a>
+						</div>
+						<div class="ancho45 fb-box-border">
+							<span class="fb-icon fb-icon-course">&nbsp;</span>
+							<a class="fb-txt-green-dark" href="#">Facultad de Riesgos</a>
+						</div>
+						<div class="ancho45 fb-box-border">
+							<span class="fb-icon fb-icon-course">&nbsp;</span>
+							<a class="fb-txt-green-dark" href="#">Facultad de Operaciones y Sistemas</a>
+						</div>
+						<div class="ancho45 fb-box-border">
+							<span class="fb-icon fb-icon-course">&nbsp;</span>
+							<a class="fb-txt-green-dark" href="#">Facultad de Administración y Negocios</a>
+						</div>
+					</div>
+					
+					<div class="fb-programas">
+						<div class="ancho95 fb-box-border">
+							<span class="fb-icon fb-icon-program">&nbsp;</span>
+							<a class="fb-txt-green" href="#">Programa Normativo</a>
+						</div>
+						<div class="ancho95 fb-box-border">
+							<span class="fb-icon fb-icon-program">&nbsp;</span>
+							<a class="fb-txt-green" href="#">Programa Formativos</a>
+						</div>
+					</div>
+					<div class="fb-subprogramas">
+						<div class="ancho95 fb-box-border">
+							<span class="fb-icon fb-link-category"></span>
+							<a class="fb-txt-gray" href="#">Calidad de servicio al cliente</a>
+						</div>
+						<div class="ancho95 fb-box-border">
+							<span class="fb-icon fb-link-category"></span>
+							<a class="fb-txt-gray" href="#">Cultura</a>
+						</div>
+					</div>				
 				</div>
-				<div class="span4">
+			<!-- se agregó este bloque fin-->
+				<div class="span5">
 					<div class="fb-block">
 						<div class="fb-block-header">
 							<h3 class="fb-txt-gray">
@@ -150,7 +192,7 @@ $contador=0;
                 $file=new moodle_url('/course/view.php', array('id'=>$onecourse->courseid));
 
 				$temp.='<li>
-									<a href="#" class="fb-txt-green">
+									<a href="'.$file.'" class="fb-txt-green">
 										<span class="fb-icon fb-icon-item-curso">&nbsp;</span>
 										'.$onecourse->course.'
 									</a>

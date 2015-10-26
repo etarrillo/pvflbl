@@ -36,4 +36,7 @@ if ($ADMIN->fulltree) {
     $settings->add(new mod_certificate_admin_setting_font('certificate/fontserif',
         get_string('fontserif', 'mod_certificate'), get_string('fontserif_desc', 'mod_certificate'), 'freeserif'));
 
+    $settings->add(new mod_certificate_admin_setting_font('certificate/pfbeausanspro',
+        get_string('pfbeausanspro', 'mod_certificate'), get_string('pfbeausanspro_desc', 'mod_certificate'), 'pfbeausanspro'));
+
 }
