@@ -62,7 +62,7 @@ if($admin){
 
 		$polls = $model->get_librarys($value->id);
 		$html.='<div class="fb-table">
-				<div class="fb-table-header fb-txt-green">
+				<div style="border:1px solid #858585;" class="fb-table-header fb-txt-green">
 				<span class="fb-ancho100">'.$value->name.'</span></div>';
 
 				foreach ($polls as $pollid => $pollvalue) {

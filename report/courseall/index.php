@@ -54,6 +54,16 @@ $imagen =  $CFG->wwwroot.'/theme/falabella/pix/img-main-frontpage.png';
 			<div class="row-fluid">
 				<!-- se agregó este bloque inicio-->
 				<div class="span7" id="fb-front-block">
+
+					<h4 class="fb-title fb-txt-green">¿Qué es la Escuela de Negocios del banco Falabella?</h4>
+
+					<p class="fb-parrafo fb-txt-gray">Es la instancia en la que se alinean nuestros pilares estratégicos (Crecimiento, Rentabilidad
+						Sostenibilidad), Principios culturales (Nos apasionamos por los clientes, Jugamos en equipo,
+						Desarrollamos a las personas, Somos protagonistas y Hacemos que las cosas pasen) y nuestros Valores
+						(Transparencia, Simplicidad y Conveniencia) con los conocimientos, habilidades y las actitudes que sus
+						líderes y colaboradores necesitan para alcanzarlos.</p>
+					<p class="fb-parrafo fb-txt-gray">Estructura de la ENBF</p>
+
 					<h2 class="fb-title fb-txt-green">Crecimiento Rentabilidad Sostenibilidad</h2>
 					<h3 class="fb-subtitle">Centro de liderazgo</h3>
 					<div class="fb-facultades">
@@ -194,7 +204,7 @@ $imagen =  $CFG->wwwroot.'/theme/falabella/pix/img-main-frontpage.png';
 				$temp.='<li>
 									<a href="'.$file.'" class="fb-txt-green">
 										<span class="fb-icon fb-icon-item-curso">&nbsp;</span>
-										'.$onecourse->course.'
+										<p class="fb-parrafo-curso">'.$onecourse->course.'</p>
 									</a>
 									<ul class="fb-fechas">
 										<li>Fecha de Inicio: <span class="fecha">'.date('d-m-Y',$inidate).'</span></li>

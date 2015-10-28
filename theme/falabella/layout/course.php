@@ -22,6 +22,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 global $DB,$CFG;
+$id     = optional_param('id', 0, PARAM_INT);
+$course = $DB->get_record('course',array('id' => $id), '*', MUST_EXIST);
+$category = $DB->get_record('course_categories',array('id' => $course->category), '*', MUST_EXIST);
 // Set default (LTR) layout mark-up for a two column page (side-pre-only).
 $regionmain = 'span9 pull-right';
 $sidepre = 'span3 desktop-first-column';
@@ -110,9 +113,11 @@ echo $OUTPUT->doctype() ?>
     </div>
 </header>
 <div id="page" class="container-fluid">
-    <?php echo $OUTPUT->full_header(); ?>
+    <?php echo $OUTPUT->full_header();?>
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="<?php echo $regionmain; ?>">
+        <h3 class="fb-txt-green fb-txt-bold"><?php echo $category->name; ?>:</h3>
+        <h3 class="fb-txt-gray"><?php echo $course->fullname; ?></h3>
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();

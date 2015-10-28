@@ -104,7 +104,7 @@
 	font-weight: bold;
 }
 .fb-title{
-	font-size: 32px;
+	font-size: 24px;
 }
 .fb-title-modules-cal{
 	font-size: 24px;
@@ -133,6 +133,7 @@
 .fb-parrafo{
 	font-size: 14px;
 	color: #555759;
+	text-align: justify;
 }
 .fb-nota-desaprobada{
 	color:red;
@@ -151,22 +152,29 @@
 	width: 47%;
 	display: inline-block;
 	vertical-align: top;
+	height:155px;
+    position: relative;
 }
 .fb-list-main-category .fb-category h4{
 	font-size: 17px;
 	text-transform: uppercase;
 	color: #007833;
 }
-.fb-list-main-category .fb-category p{}
+.fb-list-main-category .fb-category p{
+	text-align: justify;
+}
 .fb-list-main-category .fb-category a{
 	color: #007833;
 	font-size: 15px;
 	text-align: right;
 	display: block;
+	position: absolute;
+    right: 0;
+    bottom: 0;
 }
 /*Distribuir anchos*/
 .fb-ancho10{width: 10%;}.fb-ancho20{width: 20%;}.fb-ancho30{width: 30%;}.fb-ancho40{width: 40%;}.fb-ancho50{width: 50%;}.fb-ancho60{width: 60%;}.fb-ancho70{width: 70%;}.fb-ancho80{width: 80%;}.fb-ancho90{width: 90%;}.fb-ancho100{width: 100%;}/*tablas*/
-.fb.ancho15{width: 15%;}.fb-ancho45{width: 45%;}.fb-ancho95{width: 95%;}
+.fb-ancho15{width: 15%;}.fb-ancho45{width: 45%;}.fb-ancho95{width: 95%;}
 /*Tablas de cursos y calificaciones*/
 .fb-table{
 	margin-top: 20px;
@@ -201,7 +209,7 @@
 	background-position: top center;
 	-webkit-background-size: 96%;
 	background-size: 96%;
-	min-height: 555px;
+	min-height: 535px;
 	margin-top: 15px;
 }
 
@@ -213,7 +221,7 @@
 }
 /*Frontpage*/
 .path-report-courseall #fb-menu{
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 #page-report-courseall-view{
 	background-image: url([[pix:theme|bg-frontpage1]]);
@@ -245,11 +253,13 @@
 	line-height: 30px;
 	border: 1px solid #555759;
 	padding: 5px 0px 5px 25px;
-	font-size: 21px;
+	font-size: 17px;
 	border-radius: 10px;
 }
 .fb-block .fb-block-header p{
-	padding: 10px;
+	 padding: 10px;
+     text-align: justify;
+     margin: 0;
 }
 .fb-block .fb-block-header>a{
 	text-align: right;
@@ -279,16 +289,38 @@
 }
 
 /*Perfil*/
+@media (min-width: 1200px){
+.form-horizontal .control-label {
+   width: 215px;
+}
+.form-horizontal .controls {
+   margin-left: 230px;
+}
+}
+/*Perfil*/
+ul.fb-list-user{
+margin-top: 5%;
+}
+ul.fb-list-user li{
+list-style: none;
+}
+#img-fb-user img{
+width: 25%;
+height: auto;
+max-width: 115px;
+}
 .fb-user-list{}
 .fb-user-list li{
-	list-style: none;
+list-style: none;
 }
 #fb-user-img img{
-	width: 20%;
-	height: auto;
-	border-radius: 50%;
-	border: 2px solid #cccccc;
+width: 20%;
+height: auto;
+border-radius: 50%;
+border: 2px solid #cccccc;
 }
+
+
 .fb-block-perfil{}
 .fb-block-perfil h4{
 	padding-bottom: 10px;
@@ -303,7 +335,7 @@
 	text-align: left!important;
 }
 .fb-block-perfil form input{
-	color: #047832;
+	color: #047832!important;
 }
 .fb-block-perfil form input[type="submit"]{
 	border: none;
@@ -567,4 +599,52 @@
 			width: 100%!important;
 		}
 }
+
+.fb-parrafo-curso{
+display: inline-block;
+vertical-align: top;
+width: 85%;
+padding: 0px 10px 0px 10px!important;
+}
+.fb-parrafo-curso-calificacion{
+display: inline-block;
+vertical-align: top;
+width: 82%;
+padding: 0px 10px 10px 10px!important;
+}
+
+.fb-parrafo-curso-category{
+display: inline-block;
+vertical-align: top;
+width: 80%;
+padding: 0px 10px 10px 10px!important;
+}
+
+.body-frontpage{margin-top:20px}
+
+.path-mod-survey .page-header-headings h1{
+	font-size: 24px;
+	color: #555759;
+}
+.path-mod-survey #region-main h2{
+	font-size: 18px;
+    color: #047832;
+}
+
+.fb-btn-perfil{
+	font-size: 20px!important;
+	padding-top: 11px!important;
+	font-family: 'pf_beausans_prosemibold'!important;
+	color: #047832!important;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)!important;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%)!important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)))!important;
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%)!important;
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%)!important;
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%)!important;
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%)!important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 )!important;
+}
+
+
 

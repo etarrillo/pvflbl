@@ -62,7 +62,7 @@ $contador=0;
 			<div class="row-fluid">
 				<div class="span8">
 					<div class="fb-table">						
-						<div class="fb-table-header fb-txt-green">
+						<div style="border:1px solid #858585;" class="fb-table-header fb-txt-green">
 							<span class="fb-ancho45">Curso</span>
 							<span class="fb-ancho15">Inicio</span>
 							<span class="fb-ancho15">Fin</span>
@@ -167,9 +167,9 @@ $contador=0;
 								<span class="fb-icon fb-icon-course">&nbsp;</span>';
 								if($final_condition){
 
-								$temp.='<a href="'.$ruta.'" class="fb-txt-green">'.$onecourse->course.'</a></span>';
+								$temp.='<p class="fb-parrafo-curso-category"><a href="'.$ruta.'" class="fb-txt-green">'.$onecourse->course.'</a></p></span>';
 							    }else{
-								$temp.='<a href="" class="fb-txt-green">'.$onecourse->course.'</a></span>';
+								$temp.='<p class="fb-parrafo-curso-category"><a href="" class="fb-txt-green">'.$onecourse->course.'</a></p></span>';
 							    }
 					$temp.='<span class="fb-txt-gray fb-ancho15">'. date('d-m-Y',$inidate).'</span>';
 					$temp.='<span class="fb-txt-gray fb-ancho15">'. date('d-m-Y',$findate).'</span>';

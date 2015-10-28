@@ -40,7 +40,7 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page-login" class="container-fluid">
     <div id="page-content" class="row-fluid">
-        <section class="span4">
+        <section style="margin-top:35px;" class="span4">
             <img src="<?php echo $CFG->wwwroot;?>/theme/falabella/pix/logo-en-falabella.png" alt="">
         </section>
         <section id="fb-form" class="span8">
