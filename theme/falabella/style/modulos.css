@@ -645,6 +645,26 @@ padding: 0px 10px 10px 10px!important;
 	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 100%)!important;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 )!important;
 }
+.fb-box-txt{
+	text-align: center;
+}
 
+/*Agregado el día 28 de octubre a las 2006*/
+.path-mod{}
 
+.header.backto a{
+	color: #007833;
+}
+.path-mod h1{
+	color: #007833;
+	font-size: 25px;
+}
+.path-mod h2{
+	color: #555759;
+	font-size: 22px;
+}
+.path-mod h3{
+	color: #007833;
+	font-size: 18px;
+}
 

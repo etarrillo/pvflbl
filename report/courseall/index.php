@@ -54,57 +54,15 @@ $imagen =  $CFG->wwwroot.'/theme/falabella/pix/img-main-frontpage.png';
 			<div class="row-fluid">
 				<!-- se agregó este bloque inicio-->
 				<div class="span7" id="fb-front-block">
-
-					<h4 class="fb-title fb-txt-green">¿Qué es la Escuela de Negocios del banco Falabella?</h4>
-
-					<p class="fb-parrafo fb-txt-gray">Es la instancia en la que se alinean nuestros pilares estratégicos (Crecimiento, Rentabilidad
-						Sostenibilidad), Principios culturales (Nos apasionamos por los clientes, Jugamos en equipo,
-						Desarrollamos a las personas, Somos protagonistas y Hacemos que las cosas pasen) y nuestros Valores
-						(Transparencia, Simplicidad y Conveniencia) con los conocimientos, habilidades y las actitudes que sus
-						líderes y colaboradores necesitan para alcanzarlos.</p>
-					<p class="fb-parrafo fb-txt-gray">Estructura de la ENBF</p>
-
-					<h2 class="fb-title fb-txt-green">Crecimiento Rentabilidad Sostenibilidad</h2>
-					<h3 class="fb-subtitle">Centro de liderazgo</h3>
-					<div class="fb-facultades">
-						<div class="ancho45 fb-box-border">
-							<span class="fb-icon fb-icon-course">&nbsp;</span>
-							<a class="fb-txt-green-dark" href="#">Facultad Comercial</a>
-						</div>
-						<div class="ancho45 fb-box-border">
-							<span class="fb-icon fb-icon-course">&nbsp;</span>
-							<a class="fb-txt-green-dark" href="#">Facultad de Riesgos</a>
-						</div>
-						<div class="ancho45 fb-box-border">
-							<span class="fb-icon fb-icon-course">&nbsp;</span>
-							<a class="fb-txt-green-dark" href="#">Facultad de Operaciones y Sistemas</a>
-						</div>
-						<div class="ancho45 fb-box-border">
-							<span class="fb-icon fb-icon-course">&nbsp;</span>
-							<a class="fb-txt-green-dark" href="#">Facultad de Administración y Negocios</a>
-						</div>
+					<div class="fb-box-txt">
+						<h4 style="text-align:center;" class="fb-title fb-txt-green">Escuela de Negocios del Banco Falabella</h4>
+						<img style="width:95%;height:auto;" src="'.$imagen.'" alt="">
+						<p class="fb-parrafo fb-txt-gray">Es la instancia en la que se alinean nuestros pilares estratégicos (Crecimiento, Rentabilidad
+							Sostenibilidad), Principios culturales (Nos apasionamos por los clientes, Jugamos en equipo,
+							Desarrollamos a las personas, Somos protagonistas y Hacemos que las cosas pasen) y nuestros Valores
+							(Transparencia, Simplicidad y Conveniencia) con los conocimientos, habilidades y las actitudes que sus
+							líderes y colaboradores necesitan para alcanzarlos.</p>
 					</div>
-					
-					<div class="fb-programas">
-						<div class="ancho95 fb-box-border">
-							<span class="fb-icon fb-icon-program">&nbsp;</span>
-							<a class="fb-txt-green" href="#">Programa Normativo</a>
-						</div>
-						<div class="ancho95 fb-box-border">
-							<span class="fb-icon fb-icon-program">&nbsp;</span>
-							<a class="fb-txt-green" href="#">Programa Formativos</a>
-						</div>
-					</div>
-					<div class="fb-subprogramas">
-						<div class="ancho95 fb-box-border">
-							<span class="fb-icon fb-link-category"></span>
-							<a class="fb-txt-gray" href="#">Calidad de servicio al cliente</a>
-						</div>
-						<div class="ancho95 fb-box-border">
-							<span class="fb-icon fb-link-category"></span>
-							<a class="fb-txt-gray" href="#">Cultura</a>
-						</div>
-					</div>				
 				</div>
 			<!-- se agregó este bloque fin-->
 				<div class="span5">

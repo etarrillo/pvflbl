@@ -369,7 +369,20 @@ ul.flexsections li.section .content ul.section li.activity .activityinstance a{
 	color: #007833;
 }
 
-
+/*Site index agregado el día 29 de octubre del 2015*/
+#page-site-index{}
+#page-site-index h1{
+	font-size: 26px;
+	color: #047832;
+}
+#page-site-index h2{
+	font-size: 22px;
+	color: #555759;
+}
+#page-site-index .coursebox .info h3 a{
+	font-size: 18px;
+	color: #555759;
+}
 
 
 
